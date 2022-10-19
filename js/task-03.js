@@ -30,3 +30,5 @@ const makeGalleryCard = ({url , alt} = {}) => {
 const galleryLiElements = images.map(makeGalleryCard).join(``);
 
 galleryRef.insertAdjacentHTML(`beforeend`, galleryLiElements );
+
+galleryRef.style.cssText = 'display: flex; gap: 15px; flex-wrap: wrap';

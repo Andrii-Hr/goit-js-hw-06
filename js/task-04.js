@@ -4,20 +4,22 @@
 // Оновлюй інтерфейс новим значенням змінної counterValue.
 
 
-let counterValue = document.querySelector(`#value`)
+const spanEl = document.querySelector(`#value`)
 
 const decrementRef = document.querySelector(`button[data-action="decrement"]`)
 
 const incrementRef = document.querySelector(`button[data-action="increment"]`)
 
-const increment = () => { 
-    counterValue.textContent = Number(counterValue.textContent) +1;
+let counterValueTotal = 0;
 
-}
-const decrement = () => {    
-    counterValue.textContent = Number(counterValue.textContent) -1;
+incrementRef.addEventListener ( `click`, () => { 
+    counterValueTotal += 1
+    spanEl.textContent = counterValueTotal
+
+})
+decrementRef.addEventListener( `click`, () => {    
+    counterValueTotal -= 1
+    spanEl.textContent = counterValueTotal
     
-}
+})
 
-decrementRef.addEventListener(`click`, decrement);
-incrementRef.addEventListener(`click`, increment);

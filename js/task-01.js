@@ -7,7 +7,7 @@
 const liItemsRef = document.querySelectorAll(".item");
 console.log(`Number of categories: ${liItemsRef.length}`)
 
-const allCategoriesArray = liItemsRef.forEach(el =>{
+ liItemsRef.forEach(el =>{
   console.log(`Category: ${el.querySelector("h2").textContent}`)
   console.log(`Elements: ${el.querySelectorAll("li").length}`)
 })
